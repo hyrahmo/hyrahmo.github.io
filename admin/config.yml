@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: hyrahmo/hyrahmo.github.io
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Язык", name: "lang", widget: "select", options: ["ru","en"] }
+      - { label: "Заголовок (RU)", name: "title_ru", widget: "string", required: false }
+      - { label: "Заголовок (EN)", name: "title_en", widget: "string", required: false }
+      - { label: "Содержимое (RU)", name: "body_ru", widget: "markdown", required: false }
+      - { label: "Содержимое (EN)", name: "body_en", widget: "markdown", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }

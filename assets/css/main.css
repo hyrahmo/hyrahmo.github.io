@@ -1,0 +1,10 @@
+/* Minimal Tailwind-like utility placeholders.
+   For full Tailwind, user can integrate PostCSS/Tailwind locally.
+*/
+:root { --bg: #ffffff; --text: #111827; }
+[data-theme="dark"] { --bg: #0b1220; --text: #e6eef8; }
+body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; padding:0; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+a { color: inherit; text-decoration: underline; }
+header, footer { padding-left: 16px; padding-right: 16px; }
+.prose img { max-width: 100%; height: auto; }

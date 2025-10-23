@@ -1,0 +1,29 @@
+title: "Hyrahmo"
+description: "Портфолио и блог Hyrahmo"
+baseurl: "" # will be served at root
+url: "https://hyrahmo.ru"
+theme: null
+
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/blog/:year/:month/:day/:title/"
+
+# Languages
+languages:
+  - ru
+  - en

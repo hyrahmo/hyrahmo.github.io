@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Блог"
+lang: ru
+permalink: /blog/
+---
+
+<section class="container mx-auto py-12">
+  <h1 class="text-3xl font-bold mb-6">Блог</h1>
+  <ul class="space-y-6">
+    {% for post in site.posts %}
+      {% if post.lang == 'ru' %}
+      <li class="border-b pb-4">
+        <a href="{{ post.url | relative_url }}" class="text-xl font-semibold">{{ post.title }}</a>
+        <div class="text-sm text-gray-600">{{ post.date | date: "%Y-%m-%d" }}</div>
+        <p class="mt-2">{{ post.excerpt }}</p>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>

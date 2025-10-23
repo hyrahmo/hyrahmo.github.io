@@ -1,0 +1,19 @@
+<header class="bg-gray-100 dark:bg-gray-900 py-4">
+  <div class="container mx-auto flex items-center justify-between px-4">
+    <div class="flex items-center space-x-4">
+      <a href="{{ '/' | relative_url }}" class="font-bold">Hyrahmo</a>
+      <nav class="hidden md:block">
+        <a href="{{ '/' | relative_url }}" class="mr-4">Home</a>
+        <a href="{{ '/projects.html' | relative_url }}" class="mr-4">Projects</a>
+        <a href="{{ '/blog/' | relative_url }}" class="mr-4">Blog</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-3">
+      <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+      <div>
+        <a href="#" id="lang-ru">RU</a> · <a href="#" id="lang-en">EN</a>
+      </div>
+      <a class="ml-4" href="{{ '/admin/' | relative_url }}">Admin</a>
+    </div>
+  </div>
+</header>
